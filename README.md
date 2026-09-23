@@ -1,6 +1,10 @@
 # Fidak – Saudi Blood Donation Management System
 
-Fidak is a web-based blood donation management system designed to support blood donation operations in Saudi Arabia. The system allows donors to register, users to request blood, and administrators to manage donors, requests, website content, and contact queries through a secured admin dashboard.
+Fidak is a web-based blood donation management system designed to support blood donation operations in Saudi Arabia. The system allows donors to register, users to request blood, and administrators to manage donors, requests, website content, and contact queries through an admin dashboard.
+
+**PHP · MySQL · Bootstrap · JavaScript**
+
+[Preview](#screenshots) · [Local setup](#local-setup) · [Database](#database)
 
 ## Project Overview
 
@@ -47,7 +51,7 @@ This project was developed as a final project for CS2111.
 ![Admin Dashboard](screenshots/05_admin_dashboard.png)
 
 ### Donor List
-![Donor List](screenshots/06_donor_list.png)
+![Donor List](screenshots/07_admin_donor_list.png)
 
 ### Database Diagram
 ![Database Diagram](screenshots/13_database_diagram.png)
@@ -63,8 +67,26 @@ Main database operations include:
 - Update: editing page content, contact information, and admin password
 - Delete: removing donors and contact queries
 
-## Admin Access
+## Local setup
 
-```txt
+1. Install a local PHP/MySQL environment such as XAMPP and start the web server and MySQL.
+2. Clone this repository into your web server's document root:
+   `git clone https://github.com/iiYARA/fidak-blood-donation-management-system.git`
+3. Create a local database named `fidak_bbms` and import [sql/fidak_bbms_db.sql](sql/fidak_bbms_db.sql).
+4. Adjust database connection settings in [conn.php](conn.php) and [admin/conn.php](admin/conn.php) for your local environment.
+5. Open `http://localhost/fidak-blood-donation-management-system/home.php`.
+
+The database connections currently target a local MySQL instance. This is an academic prototype; use sample data for local demonstrations.
+
+## Demo admin access
+
+For the supplied demo database, the documented login is:
+
+```text
 Username: admin
 Password: 123456
+```
+
+Use these only for a local demonstration, and change demo credentials before any deployment.
+
+
